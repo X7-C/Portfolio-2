@@ -1,0 +1,69 @@
+.background-teeth {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.teeth-column {
+  position: absolute;
+  top: 0;
+  height: 200%;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.left-teeth {
+  left: -2px;
+}
+
+.right-teeth {
+  right: -2px;
+}
+
+.tooth {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  opacity: 0.4;
+  filter: brightness(1.8);
+}
+
+.tooth-left-up, .tooth-left-down {
+  border-width: 50px 0 50px 90px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.tooth-right-up, .tooth-right-down {
+  border-width: 50px 90px 50px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.tooth-left-up {
+  animation: conveyor-up 4s infinite linear;
+}
+.tooth-left-down {
+  animation: conveyor-down 4s infinite linear;
+}
+.tooth-right-up {
+  animation: conveyor-up 4s infinite linear;
+}
+.tooth-right-down {
+  animation: conveyor-down 4s infinite linear;
+}
+
+@keyframes conveyor-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes conveyor-down {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
